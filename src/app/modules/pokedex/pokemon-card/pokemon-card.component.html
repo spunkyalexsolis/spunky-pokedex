@@ -1,0 +1,18 @@
+<mat-card class="pokemon-card p-2 justify-content-center">
+    <mat-card-header>        
+    </mat-card-header>
+    <img  mat-card-image class="pokemon-sprite" src={{pokemonDetails.sprites.front_default}}/>    
+    <mat-card-content class="text-center">
+        <div>
+            #{{ pokemonDetails.id | number:'3.0' }}
+        </div>
+        <div>
+            {{ pokemonDetails.name | titlecase }}
+        </div>
+        <div>
+            <span *ngFor="let type of pokemonDetails.types">
+                {{ type.type.name | titlecase }}
+            </span>
+        </div> 
+    </mat-card-content>
+</mat-card>
